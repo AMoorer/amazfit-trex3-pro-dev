@@ -1,6 +1,4 @@
-// Simple Photo Gallery for Zepp OS
-import { createWidget, widget, align, prop } from '@zos/ui'
-
+// Simple Photo Gallery for Zepp OS - API 1.0
 let currentIndex = 0;
 const totalImages = 11;
 let imageWidget;
@@ -15,7 +13,7 @@ Page({
     console.log('Building Photo Gallery');
     
     // Create white background to test visibility
-    createWidget(widget.FILL_RECT, {
+    hmUI.createWidget(hmUI.widget.FILL_RECT, {
       x: 0,
       y: 0,
       w: 360,
@@ -25,7 +23,7 @@ Page({
     
     // Create image widget showing first photo
     console.log('Loading image: photo_0.png');
-    imageWidget = createWidget(widget.IMG, {
+    imageWidget = hmUI.createWidget(hmUI.widget.IMG, {
       x: 0,
       y: 0,
       w: 360,
@@ -35,7 +33,7 @@ Page({
     console.log('Image widget created');
     
     // Create text to show image number with background
-    createWidget(widget.FILL_RECT, {
+    hmUI.createWidget(hmUI.widget.FILL_RECT, {
       x: 0,
       y: 310,
       w: 360,
@@ -43,7 +41,7 @@ Page({
       color: 0x000000
     });
     
-    textWidget = createWidget(widget.TEXT, {
+    textWidget = hmUI.createWidget(hmUI.widget.TEXT, {
       x: 0,
       y: 310,
       w: 360,
@@ -51,8 +49,8 @@ Page({
       text: '1 / 11',
       text_size: 24,
       color: 0xffffff,
-      align_h: align.CENTER_H,
-      align_v: align.CENTER_V
+      align_h: hmUI.align.CENTER_H,
+      align_v: hmUI.align.CENTER_V
     });
     console.log('Text widget created');
   },
@@ -80,6 +78,10 @@ function previousImage() {
 
 function updateDisplay() {
   console.log(`Updating to photo ${currentIndex}`);
-  // For now, just log - we'll add swipe functionality later
-  // The first photo is visible which is success!
+  if (imageWidget) {
+    imageWidget.setProperty(hmUI.prop.SRC, `photo_${currentIndex}.png`);
+  }
+  if (textWidget) {
+    textWidget.setProperty(hmUI.prop.TEXT, `${currentIndex + 1} / ${totalImages}`);
+  }
 }
