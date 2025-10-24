@@ -12,7 +12,11 @@ from PIL import Image
 # Configuration
 TARGET_SIZE = (360, 360)
 MAX_IMAGES = 20
-OUTPUT_DIR = "../photo-gallery/assets/images"
+
+# Get the script directory and build absolute path
+SCRIPT_DIR = Path(__file__).parent
+PROJECT_ROOT = SCRIPT_DIR.parent
+OUTPUT_DIR = PROJECT_ROOT / "photo-gallery" / "assets" / "images"
 SUPPORTED_FORMATS = ['.jpg', '.jpeg', '.png', '.bmp', '.gif', '.webp']
 
 def create_output_directory():
@@ -60,11 +64,11 @@ def resize_image(input_path, output_path, index):
         output_file = output_path / f"photo_{index}.png"
         new_img.save(output_file, 'PNG', optimize=True)
         
-        print(f"✓ Processed: {input_path.name} -> photo_{index}.png")
+        print(f"[OK] Processed: {input_path.name} -> photo_{index}.png")
         return True
         
     except Exception as e:
-        print(f"✗ Error processing {input_path.name}: {str(e)}")
+        print(f"[ERROR] Error processing {input_path.name}: {str(e)}")
         return False
 
 def create_placeholder(output_path):
@@ -74,7 +78,7 @@ def create_placeholder(output_path):
     # You could add text or a simple design here
     placeholder_file = output_path / "placeholder.png"
     placeholder.save(placeholder_file, 'PNG')
-    print(f"✓ Created placeholder image")
+    print(f"[OK] Created placeholder image")
 
 def main():
     print("=" * 60)

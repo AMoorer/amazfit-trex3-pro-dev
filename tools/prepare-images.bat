@@ -15,6 +15,7 @@ if "%~1"=="" (
 echo Preparing images from: %~1
 echo.
 
+cd /d "%~dp0"
 python prepare-images.py "%~1"
 
 echo.
