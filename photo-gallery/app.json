@@ -1,0 +1,41 @@
+{
+  "app": {
+    "appId": "com.amoorer.photogallery",
+    "appName": "Photo Gallery",
+    "appType": "app",
+    "version": {
+      "code": 1,
+      "name": "1.0.0"
+    },
+    "icon": "icon.png",
+    "vender": "AMoorer",
+    "description": "Swipeable photo gallery for your watch"
+  },
+  "permissions": [
+    "data:user.hd.read",
+    "device:os.bg_service"
+  ],
+  "runtime": {
+    "apiVersion": {
+      "compatible": "1.0.0",
+      "target": "1.0.1",
+      "minVersion": "1.0.0"
+    }
+  },
+  "targets": {
+    "trex-3-pro": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/index"
+          ]
+        }
+      }
+    }
+  },
+  "i18n": {
+    "en-US": {
+      "appName": "Photo Gallery"
+    }
+  }
+}

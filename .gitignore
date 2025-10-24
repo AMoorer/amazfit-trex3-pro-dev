@@ -23,6 +23,10 @@ Thumbs.db
 simulator/
 *.bin
 
+# Photo gallery - exclude user photos but keep placeholder
+photo-gallery/assets/images/photo_*.png
+!photo-gallery/assets/images/placeholder.png
+
 # Logs
 logs/
 *.log

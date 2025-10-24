@@ -7,7 +7,9 @@
     "build": "zeus build",
     "simulator": "zeus simulator",
     "create": "zeus create",
-    "debug": "zeus debug"
+    "debug": "zeus debug",
+    "build:gallery": "cd photo-gallery && zeus build",
+    "dev:gallery": "cd photo-gallery && zeus dev"
   },
   "dependencies": {
     "@zeppos/device-types": "^1.0.0",
