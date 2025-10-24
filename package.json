@@ -1,0 +1,20 @@
+{
+  "name": "amazfit-trex3-pro-app",
+  "version": "1.0.0",
+  "description": "Development environment for Amazfit Trex 3 Pro apps",
+  "main": "app.js",
+  "scripts": {
+    "build": "zeus build",
+    "simulator": "zeus simulator",
+    "create": "zeus create",
+    "debug": "zeus debug"
+  },
+  "dependencies": {
+    "@zeppos/device-types": "^1.0.0",
+    "@zeppos/display": "^1.0.0",
+    "@zeppos/device": "^1.0.0"
+  },
+  "devDependencies": {
+    "@zeppos/zeus-cli": "^1.0.0"
+  }
+}
