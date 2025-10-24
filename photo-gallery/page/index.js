@@ -11,7 +11,7 @@ const vibrator = new Vibrator()
 Page({
   state: {
     currentIndex: 0,
-    totalImages: 5, // Set to the number of images you have (max 20)
+    totalImages: 11, // Set to the number of images you have (max 20)
     imageWidgets: [],
     imageFiles: []
   },
