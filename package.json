@@ -4,19 +4,10 @@
   "description": "Development environment for Amazfit Trex 3 Pro apps",
   "main": "app.js",
   "scripts": {
-    "build": "zeus build",
-    "simulator": "zeus simulator",
-    "create": "zeus create",
-    "debug": "zeus debug",
-    "build:gallery": "cd photo-gallery && zeus build",
-    "dev:gallery": "cd photo-gallery && zeus dev"
+    "install-tools": "echo Please install Zepp OS tools from https://docs.zepp.com/",
+    "info": "echo Zepp OS apps are built using native tools. See README.md for setup instructions."
   },
-  "dependencies": {
-    "@zeppos/device-types": "^1.0.0",
-    "@zeppos/display": "^1.0.0",
-    "@zeppos/device": "^1.0.0"
-  },
-  "devDependencies": {
-    "@zeppos/zeus-cli": "^1.0.0"
-  }
+  "keywords": ["amazfit", "zepp-os", "smartwatch", "trex-3-pro"],
+  "author": "AMoorer",
+  "license": "MIT"
 }

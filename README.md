@@ -4,32 +4,25 @@ This is a development environment for creating apps for the Amazfit Trex 3 Pro s
 
 ## Prerequisites
 
-1. Node.js (v14 or later)
-2. npm (comes with Node.js)
-3. Zepp OS CLI
-4. Zepp OS Simulator
+1. **Node.js** (v14 or later) - ✅ Installed (v22.21.0)
+2. **Zepp OS Development Tools** - Download from official Zepp OS resources
+3. **Zepp App** on your phone - For app installation
 
-## Setup Instructions
+## Important Note
 
-1. Install the Zepp OS CLI globally:
-   ```bash
-   npm install -g @zeppos/zeus-cli
-   ```
+Zepp OS apps are developed using the official Zepp OS development kit and tools. The app code in this repository is structured for Zepp OS compatibility, but you'll need to:
 
-2. Install project dependencies:
-   ```bash
-   npm install
-   ```
+1. Register as a Zepp OS developer
+2. Download the official Zepp OS SDK and tools
+3. Use the Zepp watchface maker or official IDE
 
-3. Build the application:
-   ```bash
-   npm run build
-   ```
+## Alternative: Quick Deploy
 
-4. Run the simulator:
-   ```bash
-   npm run simulator
-   ```
+For the **Photo Gallery app** specifically, you can:
+
+1. Your images are already prepared in `photo-gallery/assets/images/`
+2. Package the app using Zepp OS tools or the Zepp companion app
+3. Sideload to your watch via the Zepp mobile app
 
 ## Project Structure
 

@@ -64,13 +64,19 @@ If you prefer to resize images manually:
 4. Name them: `photo_0.png`, `photo_1.png`, `photo_2.png`, etc.
 5. Place in `photo-gallery/assets/images/` folder
 
-### 3. Build the App
+### 3. Package the App
 
-```bash
-npm run build:gallery
-```
+To package and deploy the app, you'll need the official Zepp OS development tools:
 
-This compiles the app for your watch.
+**Option A: Official Zepp OS Tools**
+- Download the Zepp OS SDK from the official Zepp developer portal
+- Use the Zeus CLI or Zepp IDE to build and package
+- Follow official Zepp OS documentation
+
+**Option B: Zepp Watchface Maker (Easier)**
+- Download Zepp Watchface Maker from the Zepp website
+- Import your images and app structure
+- Export as a .zpk file
 
 ### 4. Deploy to Your Watch
 
