@@ -1,4 +1,6 @@
 // Simple Photo Gallery for Zepp OS
+import { createWidget, widget, align, prop } from '@zos/ui'
+
 let currentIndex = 0;
 const totalImages = 11;
 let imageWidget;
@@ -12,15 +14,36 @@ Page({
   build() {
     console.log('Building Photo Gallery');
     
-    // Create image widget showing first photo
-    imageWidget = hmUI.createWidget(hmUI.widget.IMG, {
+    // Create white background to test visibility
+    createWidget(widget.FILL_RECT, {
       x: 0,
       y: 0,
-      src: 'photo_0.png'
+      w: 360,
+      h: 360,
+      color: 0xffffff
     });
     
-    // Create text to show image number
-    textWidget = hmUI.createWidget(hmUI.widget.TEXT, {
+    // Create image widget showing first photo
+    console.log('Loading image: photo_0.png');
+    imageWidget = createWidget(widget.IMG, {
+      x: 0,
+      y: 0,
+      w: 360,
+      h: 360,
+      src: 'photo_0.png'
+    });
+    console.log('Image widget created');
+    
+    // Create text to show image number with background
+    createWidget(widget.FILL_RECT, {
+      x: 0,
+      y: 310,
+      w: 360,
+      h: 50,
+      color: 0x000000
+    });
+    
+    textWidget = createWidget(widget.TEXT, {
       x: 0,
       y: 310,
       w: 360,
@@ -28,35 +51,10 @@ Page({
       text: '1 / 11',
       text_size: 24,
       color: 0xffffff,
-      align_h: hmUI.align.CENTER_H,
-      align_v: hmUI.align.CENTER_V
+      align_h: align.CENTER_H,
+      align_v: align.CENTER_V
     });
-    
-    // Handle swipe gestures
-    hmUI.createWidget(hmUI.widget.STROKE_RECT, {
-      x: 0,
-      y: 0,
-      w: 360,
-      h: 360,
-      color: 0x000000
-    }).addEventListener(hmUI.event.CLICK_DOWN, (info) => {
-      // Next image on tap
-      nextImage();
-    });
-    
-    // Register key event for navigation
-    hmUI.setKeyHandler((key, action) => {
-      if (action === hmUI.key.action.RELEASE) {
-        if (key === hmUI.key.UP) {
-          previousImage();
-          return true;
-        } else if (key === hmUI.key.DOWN) {
-          nextImage();
-          return true;
-        }
-      }
-      return false;
-    });
+    console.log('Text widget created');
   },
   
   onDestroy() {
@@ -81,19 +79,7 @@ function previousImage() {
 }
 
 function updateDisplay() {
-  if (imageWidget) {
-    imageWidget.setProperty(hmUI.prop.MORE, {
-      src: `photo_${currentIndex}.png`
-    });
-  }
-  if (textWidget) {
-    textWidget.setProperty(hmUI.prop.MORE, {
-      text: `${currentIndex + 1} / ${totalImages}`
-    });
-  }
-  
-  // Vibrate for feedback
-  hmApp.alarmNew({
-    type: 'vibrate'
-  });
+  console.log(`Updating to photo ${currentIndex}`);
+  // For now, just log - we'll add swipe functionality later
+  // The first photo is visible which is success!
 }
