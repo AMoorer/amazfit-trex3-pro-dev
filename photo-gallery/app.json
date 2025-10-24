@@ -35,6 +35,21 @@
           ]
         }
       }
+    },
+    "bip-6": {
+      "platforms": [
+        {
+          "name": "bip-6",
+          "deviceSource": 10223872
+        }
+      ],
+      "module": {
+        "page": {
+          "pages": [
+            "page/index"
+          ]
+        }
+      }
     }
   },
   "defaultLanguage": "en-US",

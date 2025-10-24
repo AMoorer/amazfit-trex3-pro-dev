@@ -1,0 +1,39 @@
+{
+  "configVersion": "v2",
+  "app": {
+    "appId": 1025526,
+    "appName": "Photo Gallery Face",
+    "appType": "watchface",
+    "version": {
+      "code": 1,
+      "name": "1.0.0"
+    },
+    "icon": "icon.png",
+    "vender": "AMoorer",
+    "description": "Photo gallery as a watchface - tap to change photos"
+  },
+  "permissions": [],
+  "runtime": {
+    "apiVersion": {
+      "compatible": "3.0.0",
+      "target": "3.5.0",
+      "minVersion": "3.0.0"
+    }
+  },
+  "targets": {
+    "trex-3-pro": {
+      "platforms": [
+        {
+          "name": "t-rex-3-pro",
+          "deviceSource": 9765120
+        }
+      ]
+    }
+  },
+  "defaultLanguage": "en-US",
+  "i18n": {
+    "en-US": {
+      "appName": "Photo Gallery Face"
+    }
+  }
+}
