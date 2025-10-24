@@ -53,6 +53,30 @@ Page({
       align_v: hmUI.align.CENTER_V
     });
     console.log('Text widget created');
+    
+    // Left side button - previous photo
+    hmUI.createWidget(hmUI.widget.IMG, {
+      x: 0,
+      y: 0,
+      w: 180,
+      h: 360,
+      src: ''
+    }).addEventListener(hmUI.event.CLICK_UP, (info) => {
+      console.log('Previous photo');
+      previousImage();
+    });
+    
+    // Right side button - next photo
+    hmUI.createWidget(hmUI.widget.IMG, {
+      x: 180,
+      y: 0,
+      w: 180,
+      h: 360,
+      src: ''
+    }).addEventListener(hmUI.event.CLICK_UP, (info) => {
+      console.log('Next photo');
+      nextImage();
+    });
   },
   
   onDestroy() {
