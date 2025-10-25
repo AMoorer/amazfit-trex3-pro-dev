@@ -12,44 +12,36 @@ Page({
   build() {
     console.log('Building Photo Gallery');
     
-    // Create black background
-    hmUI.createWidget(hmUI.widget.FILL_RECT, {
-      x: 0,
-      y: 0,
-      w: 360,
-      h: 360,
-      color: 0x000000
-    });
-    
-    // Create image widget showing first photo - full screen
+    // Images are sized correctly per device in assets folders:
+    // T-Rex 3 Pro: 480x480
+    // Bip 6: 390x450
+    // Create full-screen image widget
     console.log('Loading image: photo_0.png');
     imageWidget = hmUI.createWidget(hmUI.widget.IMG, {
       x: 0,
       y: 0,
-      w: 360,
-      h: 360,
       src: 'photo_0.png'
     });
     console.log('Image widget created');
     
-    // Left side button - previous photo
+    // Left side button - previous photo (covers left half of screen)
     hmUI.createWidget(hmUI.widget.IMG, {
       x: 0,
       y: 0,
-      w: 180,
-      h: 360,
+      w: 240,
+      h: 480,
       src: ''
     }).addEventListener(hmUI.event.CLICK_UP, (info) => {
       console.log('Previous photo');
       previousImage();
     });
     
-    // Right side button - next photo
+    // Right side button - next photo (covers right half of screen)
     hmUI.createWidget(hmUI.widget.IMG, {
-      x: 180,
+      x: 240,
       y: 0,
-      w: 180,
-      h: 360,
+      w: 240,
+      h: 480,
       src: ''
     }).addEventListener(hmUI.event.CLICK_UP, (info) => {
       console.log('Next photo');
