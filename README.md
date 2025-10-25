@@ -2,6 +2,8 @@
 
 This is a development environment for creating apps for the Amazfit Trex 3 Pro smartwatch using Zepp OS.
 
+Xepp OS dev is pretty janky. Almost intolerably so. But It is what it is... The hardware is nice...
+
 ## Prerequisites
 
 1. **Node.js** (v14 or later) - ✅ Installed (v22.21.0)
@@ -10,7 +12,7 @@ This is a development environment for creating apps for the Amazfit Trex 3 Pro s
 
 ## Important Note
 
-Zepp OS apps are developed using the official Zepp OS development kit and tools. The app code in this repository is structured for Zepp OS compatibility, but you'll need to:
+Zepp OS apps are developed using the official Zepp OS development kit and tools. And they are s@#t. The app code in this repository is structured for Zepp OS compatibility, but you'll need to:
 
 1. Register as a Zepp OS developer
 2. Download the official Zepp OS SDK and tools
