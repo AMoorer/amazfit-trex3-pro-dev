@@ -12,16 +12,16 @@ Page({
   build() {
     console.log('Building Photo Gallery');
     
-    // Create white background to test visibility
+    // Create black background
     hmUI.createWidget(hmUI.widget.FILL_RECT, {
       x: 0,
       y: 0,
       w: 360,
       h: 360,
-      color: 0xffffff
+      color: 0x000000
     });
     
-    // Create image widget showing first photo
+    // Create image widget showing first photo - full screen
     console.log('Loading image: photo_0.png');
     imageWidget = hmUI.createWidget(hmUI.widget.IMG, {
       x: 0,
@@ -31,28 +31,6 @@ Page({
       src: 'photo_0.png'
     });
     console.log('Image widget created');
-    
-    // Create text to show image number with background
-    hmUI.createWidget(hmUI.widget.FILL_RECT, {
-      x: 0,
-      y: 310,
-      w: 360,
-      h: 50,
-      color: 0x000000
-    });
-    
-    textWidget = hmUI.createWidget(hmUI.widget.TEXT, {
-      x: 0,
-      y: 310,
-      w: 360,
-      h: 50,
-      text: '1 / 11',
-      text_size: 24,
-      color: 0xffffff,
-      align_h: hmUI.align.CENTER_H,
-      align_v: hmUI.align.CENTER_V
-    });
-    console.log('Text widget created');
     
     // Left side button - previous photo
     hmUI.createWidget(hmUI.widget.IMG, {
@@ -104,8 +82,5 @@ function updateDisplay() {
   console.log(`Updating to photo ${currentIndex}`);
   if (imageWidget) {
     imageWidget.setProperty(hmUI.prop.SRC, `photo_${currentIndex}.png`);
-  }
-  if (textWidget) {
-    textWidget.setProperty(hmUI.prop.TEXT, `${currentIndex + 1} / ${totalImages}`);
   }
 }
