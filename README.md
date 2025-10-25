@@ -2,7 +2,7 @@
 
 This is a development environment for creating apps for the Amazfit Trex 3 Pro smartwatch using Zepp OS.
 
-Xepp OS dev is pretty janky. Almost intolerably so. But It is what it is... The hardware is nice...
+Zepp OS dev is pretty janky. Almost intolerably so. But It is what it is... The hardware is nice...
 
 ## Prerequisites
 
